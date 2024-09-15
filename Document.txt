@@ -1,0 +1,86 @@
+Design Decisions:
+
+1. Modular Architecture
+
+    * Decision: Organized the codebase into separate modules: controllers, models, services, and utilities.
+
+    * Rationale:
+        * Enhances maintainability and readability.
+        * Allows for easy scalability and the addition of new features.
+        * Facilitates unit testing by isolating components.
+
+
+2. In-Memory Data Storage
+
+        * Decision: Used in-memory data structures (dictionaries) for data storage.
+
+        * Rationale:
+            * Simplifies initial development without the overhead of setting up a database.
+            * Adequate for a proof-of-concept or demonstration purposes.
+
+        * Future Plan:
+            * Abstracted the data access layer to allow easy integration of a persistent database without significant changes to the API.
+
+
+3. OpenAI API Integration
+
+        * Decision: Integrated OpenAI's language model API to generate game summaries.
+
+        * Rationale:
+            * Adds a unique and engaging feature to the application.
+            * Demonstrates the ability to integrate external APIs and services.
+
+        * Testing Approach:
+            * Mocked the OpenAI API calls during testing to avoid dependency on external services and protect API keys.
+
+
+4. Error Handling and Validation
+
+        * Decision: Implemented basic error handling and input validation.
+
+        * Rationale:
+            * Ensures the application can handle common issues gracefully.
+
+        * Areas for Improvement:
+            * Expand error handling to cover more edge cases.
+            * Provide more detailed error messages to assist with debugging.
+
+5. Continuous Integration with GitHub Actions
+        
+        * Decision: Set up a CI pipeline using GitHub Actions.
+
+        * Rationale:
+            * Automates testing to ensure code quality and catch issues early.
+            * Integrates seamlessly with GitHub for an efficient workflow.
+
+6. Attempted Deployment to Heroku
+
+        * Decision: Aimed to deploy the application to Heroku for a live demo.
+
+        * Challenges Faced:
+            * Compatibility issues with gunicorn on Windows.
+            * Naming conflicts and Procfile recognition problems.
+
+        * Outcome:
+            *Decided to focus on local demonstrations due to deployment challenges.
+
+        * Future Plan:
+            * Explore alternative deployment options, such as Docker containers or other cloud providers.
+
+Technology Choices
+
+
+Python and Flask
+        Rationale:
+            * Python's simplicity and readability make it ideal for rapid development.
+            * Flask is lightweight and flexible, suitable for building RESTful APIs.
+
+Testing Framework
+        Unittest:
+            * Chosen for being Python's built-in testing framework.
+            * Provides all necessary features for unit testing without additional dependencies.
+
+Waitress for Local Testing
+        Rationale:
+            *Waitress is compatible with Windows and allows for production-like testing environments.
+            * Provides a WSGI server suitable for serving the application locally.
