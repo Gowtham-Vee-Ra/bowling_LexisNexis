@@ -305,5 +305,5 @@ Error Codes:
 
 * Current Status: No authentication is implemented.
 * Future Considerations:
-        * Implementing API keys or token-based authentication to secure endpoints.
+        * Implementing API keys or token-based authentication to secure endpoints..
 

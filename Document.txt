@@ -78,7 +78,7 @@ Python and Flask
 Testing Framework
         Unittest:
             * Chosen for being Python's built-in testing framework.
-            * Provides all necessary features for unit testing without additional dependencies.
+            * Provides all necessary features for unit testing without additional dependencies..
 
 Waitress for Local Testing
         Rationale:
