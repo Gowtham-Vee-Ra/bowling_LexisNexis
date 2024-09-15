@@ -1,3 +1,6 @@
+# game_controller.py
+
+import openai
 from flask import Blueprint, request, jsonify, abort
 from app.services.game_service import (
     create_game_service,
