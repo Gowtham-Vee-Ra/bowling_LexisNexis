@@ -73,3 +73,20 @@ To get a local copy up and running, follow these simple steps.
     python -m unittest discover -s tests
 
 This will run all tests located in the tests directory.
+
+
+### Summary of Endpoints
+
+**Games**
+
+* POST /games: Create a new game.
+* POST /games/{game_id}/rolls: Record a roll.
+* GET /games/{game_id}/score: Get the current score.
+* GET /games/{game_id}/summary: Get a game summary.
+
+
+**Players**
+
+* POST /players: Create a new player.
+* GET /players/{player_id}/statistics: Get player statistics.
+
